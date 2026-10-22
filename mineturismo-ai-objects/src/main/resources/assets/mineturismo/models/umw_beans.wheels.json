@@ -1,0 +1,10 @@
+{
+  "wheelModelId": "kariya_wheel_modern",
+  "frontZ": 1.21,
+  "rearZ": -1.22,
+  "trackHalfWidth": 0.71,
+  "axleHeight": 0.28,
+  "wheelRadius": 0.35,
+  "bodyHeight": 0.75,
+  "wheelScale": 0.85
+}

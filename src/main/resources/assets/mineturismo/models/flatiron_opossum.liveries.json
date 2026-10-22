@@ -1,0 +1,5 @@
+{
+  "liveries": ["flatiron_opossum", "flatiron_opossum_black", "flatiron_opossum_blue", "flatiron_opossum_custom", "flatiron_opossum_gray", "flatiron_opossum_red", "flatiron_opossum_white"],
+  "liveryLabels": ["Default", "Black", "Blue", "Custom", "Gray", "Red", "White"],
+  "decalLiveries": ["flatiron_opossum_custom"]
+}

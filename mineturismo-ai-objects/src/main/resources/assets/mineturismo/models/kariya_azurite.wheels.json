@@ -1,0 +1,12 @@
+{
+  "wheelModelId": "kariya_wheel_modern",
+  "frontZ": 1.51,
+  "rearZ": -1.39,
+  "trackHalfWidth": 0.89,
+  "axleHeight": 0.34,
+  "wheelRadius": 0.35,
+  "bodyHeight": 0.95,
+  "limoStretchCm": 10.0,
+  "limoZoneCm": 100.0,
+  "limoCenterOffsetCm": 0.0
+}

@@ -1,0 +1,22 @@
+{
+  "logos": [
+    {"id": "atlantis", "name": "Atlantis", "category": "emblem", "width": 150, "height": 160},
+    {"id": "kariya", "name": "Kariya", "category": "emblem", "width": 244, "height": 160},
+    {"id": "levias", "name": "Levias", "category": "emblem", "width": 232, "height": 160},
+    {"id": "levias_gold", "name": "Levias Gold", "category": "emblem", "width": 238, "height": 160},
+    {"id": "mazyama", "name": "Mazyama", "category": "emblem", "width": 197, "height": 160},
+    {"id": "boehme", "name": "Boehme", "category": "emblem", "width": 159, "height": 160},
+    {"id": "mechthild", "name": "Mechthild", "category": "emblem", "width": 160, "height": 160},
+    {"id": "ponta", "name": "Ponta", "category": "emblem", "width": 198, "height": 160},
+    {"id": "ponta_red", "name": "Ponta Red", "category": "emblem", "width": 198, "height": 160},
+    {"id": "ponte", "name": "Ponte", "category": "emblem", "width": 238, "height": 160},
+    {"id": "mines_car_share", "name": "Mines Car Share", "category": "sticker", "flat": true, "width": 159, "height": 160},
+    {"id": "mt_black", "name": "Mine Turismo Black", "category": "sticker", "flat": true, "width": 300, "height": 160},
+    {"id": "mt_white", "name": "Mine Turismo White", "category": "sticker", "flat": true, "width": 300, "height": 160},
+    {"id": "minatomirai", "name": "MinatoMirai Realty", "category": "sticker", "flat": true, "width": 307, "height": 160},
+    {"id": "avalon", "name": "Avalon", "category": "sticker", "flat": true, "width": 370, "height": 160},
+    {"id": "avalon_square", "name": "Avalon Square", "category": "sticker", "flat": true, "width": 160, "height": 160},
+    {"id": "avalon_white", "name": "Avalon White", "category": "sticker", "flat": true, "width": 369, "height": 160},
+    {"id": "avalon_black", "name": "Avalon Black", "category": "sticker", "flat": true, "width": 369, "height": 160}
+  ]
+}

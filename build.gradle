@@ -1,0 +1,782 @@
+plugins {
+	id 'maven-publish'
+}
+
+apply plugin: project.minecraft_version.startsWith('1.') ? 'net.fabricmc.fabric-loom-remap' : 'net.fabricmc.fabric-loom'
+
+version = "${project.mod_version}+${project.minecraft_version}"
+group = project.maven_group
+
+base {
+	archivesName = 'mineturismo'
+}
+
+repositories {
+
+}
+
+stonecutter {
+
+	replacements.string(eval(current.version, '>=1.21.11')) { b ->
+		b.replace('ResourceLocation', 'Identifier')
+	}
+
+	replacements.string(eval(current.version, '>=1.21.11')) { b ->
+		b.replace('RenderType.', 'RenderTypes.')
+	}
+
+	replacements.string('axis_mulpose_compat', eval(current.version, '<1.19.3')) { b ->
+		b.replace('Axis.', 'com.mojang.math.Vector3f.')
+	}
+
+	replacements.string(eval(current.version, '<1.17')) { b ->
+		b.replace('addRenderableWidget', 'addButton')
+	}
+
+	replacements.string(eval(current.version, '<1.16.2')) { b ->
+		b.replace('net.minecraft.world.item.context.UseOnContext', 'net.minecraft.world.item.UseOnContext')
+	}
+
+	replacements.string(eval(current.version, '<1.16.2')) { b ->
+		b.replace('import net.minecraft.client.CameraType;', 'import java.lang.Object;')
+	}
+	replacements.string(eval(current.version, '<1.16.2')) { b ->
+		b.replace('.setCameraType(CameraType.THIRD_PERSON_BACK)', '.thirdPersonView = 1')
+	}
+
+	replacements.string(eval(current.version, '<1.16')) { b ->
+		b.replace('import net.minecraft.resources.ResourceKey;', 'import com.examplebett.compat.ResourceKey;')
+	}
+
+	replacements.string(eval(current.version, '<1.16')) { b ->
+		b.replace('import net.minecraft.world.level.block.state.BlockBehaviour;', 'import java.lang.Short;')
+	}
+	replacements.string(eval(current.version, '<1.16')) { b ->
+		b.replace('BlockBehaviour.Properties', 'Block.Properties')
+	}
+
+	replacements.string(eval(current.version, '<1.16')) { b ->
+		b.replace('import net.minecraft.world.entity.ai.attributes.AttributeSupplier;', 'import net.minecraft.world.entity.monster.SharedMonsterAttributes;')
+	}
+	replacements.string(eval(current.version, '<1.16')) { b ->
+		b.replace('import net.minecraft.world.entity.ai.attributes.Attributes;', 'import java.lang.Number;')
+	}
+	replacements.string(eval(current.version, '<1.16')) { b ->
+		b.replace('this.getAttributeValue(Attributes.MOVEMENT_SPEED)', 'this.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).getValue()')
+	}
+
+	replacements.string(eval(current.version, '<1.16')) { b ->
+		b.replace('import net.minecraft.world.level.storage.LevelResource;', 'import java.lang.Byte;')
+	}
+
+	replacements.string(eval(current.version, '<1.16')) { b ->
+		b.replace('import net.minecraft.util.FastColor;', 'import java.lang.Long;')
+	}
+	replacements.string(eval(current.version, '<1.16')) { b ->
+		b.replace('FastColor.ARGB32.color(alpha8, 255, 255, 255)', '((alpha8 << 24) | 0xFFFFFF)')
+	}
+	replacements.string(eval(current.version, '<1.16')) { b ->
+		b.replace('FastColor.ARGB32.color(alpha8, 20, 20, 20)', '((alpha8 << 24) | 0x141414)')
+	}
+
+	replacements.string(eval(current.version, '<1.16')) { b ->
+		b.replace('import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;', 'import java.lang.Double;')
+	}
+
+	replacements.string(eval(current.version, '<1.16')) { b ->
+		b.replace('townCar.blockPosition()', 'new BlockPos(townCar)')
+	}
+	replacements.string(eval(current.version, '<1.16')) { b ->
+		b.replace('nearestPlayer.blockPosition()', 'new BlockPos(nearestPlayer)')
+	}
+	replacements.string(eval(current.version, '<1.16')) { b ->
+		b.replace('this.blockPosition()', 'new BlockPos(this)')
+	}
+
+	replacements.string(eval(current.version, '<1.16')) { b ->
+		b.replace('player.blockPosition()', 'new BlockPos(player)')
+	}
+
+	replacements.string(eval(current.version, '<1.16')) { b ->
+		b.replace('state.is(AiObjectModBlocks.CAR_BREAKABLE_GLASS)', 'state.getBlock() == AiObjectModBlocks.CAR_BREAKABLE_GLASS')
+	}
+	replacements.string(eval(current.version, '<1.16')) { b ->
+		b.replace('.is(AiObjectModBlocks.WATER_PUDDLE)', '.getBlock() == AiObjectModBlocks.WATER_PUDDLE')
+	}
+
+	replacements.string(eval(current.version, '<1.16')) { b ->
+		b.replace('.strength(0.1F)', '.strength(0.1F, 0.1F)')
+	}
+
+	replacements.string(eval(current.version, '<1.16')) { b ->
+		b.replace('.sound(SoundType.SLIME_BLOCK)', '.noOcclusion()')
+	}
+
+	replacements.string(eval(current.version, '<1.16')) { b ->
+		b.replace('.trackedUpdateRate(1)', '.trackable(80, 1)')
+	}
+
+	replacements.string(eval(current.version, '<1.16')) { b ->
+		b.replace('RenderType.itemEntityTranslucentCull(texture)', 'RenderType.entityTranslucentCull(texture)')
+	}
+
+	replacements.string(eval(current.version, '<1.16')) { b ->
+		b.replace('.setOutputState(CarEntityRenderer.<RenderStateShard.OutputStateShard>vanillaShard("ITEM_ENTITY_TARGET"))', '// <1.16: ITEM_ENTITY_TARGET not available, builder default used instead')
+	}
+	replacements.string(eval(current.version, '<1.16')) { b ->
+		b.replace('.setWriteMaskState(CarEntityRenderer.<RenderStateShard.WriteMaskStateShard>vanillaShard("COLOR_DEPTH_WRITE"))', '// <1.16: COLOR_DEPTH_WRITE not available, builder default used instead')
+	}
+
+	replacements.string(eval(current.version, '<1.16')) { b ->
+		b.replace('this.x = ModEntity.getX(car);', 'this.x = (float) ModEntity.getX(car);')
+	}
+	replacements.string(eval(current.version, '<1.16')) { b ->
+		b.replace('this.y = ModEntity.getY(car);', 'this.y = (float) ModEntity.getY(car);')
+	}
+	replacements.string(eval(current.version, '<1.16')) { b ->
+		b.replace('this.z = ModEntity.getZ(car);', 'this.z = (float) ModEntity.getZ(car);')
+	}
+	replacements.string(eval(current.version, '<1.16')) { b ->
+		b.replace('this.x = ModEntity.getX(this.car);', 'this.x = (float) ModEntity.getX(this.car);')
+	}
+	replacements.string(eval(current.version, '<1.16')) { b ->
+		b.replace('this.y = ModEntity.getY(this.car);', 'this.y = (float) ModEntity.getY(this.car);')
+	}
+	replacements.string(eval(current.version, '<1.16')) { b ->
+		b.replace('this.z = ModEntity.getZ(this.car);', 'this.z = (float) ModEntity.getZ(this.car);')
+	}
+
+	replacements.string(eval(current.version, '<1.16')) { b ->
+		b.replace('this.stop();', 'this.stopped = true;')
+	}
+
+	replacements.string(eval(current.version, '<1.16')) { b ->
+		b.replace('(poseStack, tickDelta) -> mineturismo$renderWaypointHint(new GuiGraphics(poseStack))', 'tickDelta -> mineturismo$renderWaypointHint(new GuiGraphics(null))')
+	}
+	replacements.string(eval(current.version, '<1.16')) { b ->
+		b.replace('(poseStack, tickDelta) -> renderMountToast(new GuiGraphics(poseStack))', 'tickDelta -> renderMountToast(new GuiGraphics(null))')
+	}
+	replacements.string(eval(current.version, '<1.16')) { b ->
+		b.replace('(poseStack, tickDelta) -> renderSpeedDisplay(new GuiGraphics(poseStack))', 'tickDelta -> renderSpeedDisplay(new GuiGraphics(null))')
+	}
+
+	replacements.string(eval(current.version, '<1.16')) { b ->
+		b.replace('(poseStack, tickDelta) -> mineturismo$renderHintTip(new GuiGraphics(poseStack))', 'tickDelta -> mineturismo$renderHintTip(new GuiGraphics(null))')
+	}
+
+	replacements.string(eval(current.version, '<1.16.2')) { b ->
+		b.replace('import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;', 'import java.lang.Boolean;')
+	}
+	replacements.string(eval(current.version, '<1.16.2')) { b ->
+		b.replace('ClientPlayConnectionEvents.JOIN.register((handler, sender, client) -> {\n\t\t\tmineturismo$nextHintIndex = 0;\n\t\t\tmineturismo$hintTicks = 0L;\n\t\t\tmineturismo$hintTipStartMs = -1L;\n\t\t});', '// <1.16.2: no ClientPlayConnectionEvents, hint reset on reconnect skipped')
+	}
+
+	replacements.string(eval(current.version, '>=26.1')) { b ->
+		b.replace('level.random', 'level.getRandom()')
+	}
+
+	replacements.string(eval(current.version, '>=26.1')) { b ->
+		b.replace('PlayerLookup.world(serverLevel)', 'PlayerLookup.level(serverLevel)')
+	}
+
+	replacements.string(eval(current.version, '>=26.1')) { b ->
+		b.replace('RenderTypes.entityCutoutNoCull(', 'RenderTypes.entityCutout(')
+	}
+	replacements.string(eval(current.version, '>=26.1')) { b ->
+		b.replace('RenderTypes.itemEntityTranslucentCull(', 'RenderTypes.entityTranslucentCullItemTarget(')
+	}
+
+	replacements.string(eval(current.version, '>=26.1')) { b ->
+		b.replace('import net.minecraft.client.renderer.state.CameraRenderState;', 'import net.minecraft.client.renderer.state.level.CameraRenderState;')
+	}
+
+	replacements.string(eval(current.version, '>=26.2')) { b ->
+		b.replace('import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;', 'import java.lang.Integer;')
+	}
+
+	replacements.string(eval(current.version, '>=26.2')) { b ->
+		b.replace('.setScreen(', '.gui.setScreen (')
+	}
+
+	replacements.string(eval(current.version, '>=26.2')) { b ->
+		b.replace('client.screen != null', 'client.gui.screen() != null')
+	}
+	replacements.string(eval(current.version, '>=26.2')) { b ->
+		b.replace('Minecraft.getInstance().screen instanceof CarCameraOrbitScreen', 'Minecraft.getInstance().gui.screen() instanceof CarCameraOrbitScreen')
+	}
+	replacements.string(eval(current.version, '>=26.2')) { b ->
+		b.replace('minecraft.screen instanceof CarCustomizationScreen', 'minecraft.gui.screen() instanceof CarCustomizationScreen')
+	}
+
+	replacements.string(eval(current.version, '>=26.2')) { b ->
+		b.replace('.screen instanceof ', '.gui.screen() instanceof ')
+	}
+	replacements.string(eval(current.version, '>=26.2')) { b ->
+		b.replace('client.screen == null', 'client.gui.screen() == null')
+	}
+
+	replacements.string(eval(current.version, '>=26.2')) { b ->
+		b.replace('minecraft.gameRenderer.getMainCamera()', 'minecraft.gameRenderer.mainCamera()')
+	}
+
+	replacements.string(eval(current.version, '>=26.2')) { b ->
+		b.replace('mc.options.hideGui', 'mc.gui.guiRenderState.isHudHidden')
+	}
+
+	replacements.string(eval(current.version, '>=26.3')) { b ->
+		b.replace('player.drop(rope, false);', 'player.drop(rope, false, net.minecraft.util.Prediction.SERVER_ONLY);')
+	}
+	replacements.string(eval(current.version, '>=26.3')) { b ->
+		b.replace('player.drop(stack, false);', 'player.drop(stack, false, net.minecraft.util.Prediction.SERVER_ONLY);')
+	}
+	replacements.string(eval(current.version, '>=26.3')) { b ->
+		b.replace('player.drop(reward, false);', 'player.drop(reward, false, net.minecraft.util.Prediction.SERVER_ONLY);')
+	}
+
+	replacements.string(eval(current.version, '>=26.3')) { b ->
+		b.replace('com.mojang.blaze3d.pipeline.RenderPipeline', 'com.mojang.renderpearl.api.pipeline.RenderPipeline')
+	}
+	replacements.string(eval(current.version, '>=26.3')) { b ->
+		b.replace('com.mojang.blaze3d.PrimitiveTopology', 'com.mojang.renderpearl.api.pipeline.PrimitiveTopology')
+	}
+	replacements.string(eval(current.version, '>=26.3')) { b ->
+		b.replace('com.mojang.blaze3d.vertex.VertexFormat', 'com.mojang.renderpearl.api.vertex.VertexFormat')
+	}
+
+	replacements.string(eval(current.version, '>=26.3')) { b ->
+		b.replace('poseStack.mulPose(', 'poseStack.rotate(')
+	}
+
+	replacements.string(eval(current.version, '>=26.3')) { b ->
+		b.replace('InputConstants.Type.KEYSYM', 'InputConstants.Type.KEYBOARD')
+	}
+	replacements.string(eval(current.version, '>=26.3')) { b ->
+		b.replace('GLFW.GLFW_KEY_H', 'InputConstants.KEY_H')
+	}
+	replacements.string(eval(current.version, '>=26.3')) { b ->
+		b.replace('GLFW.GLFW_KEY_L', 'InputConstants.KEY_L')
+	}
+	replacements.string(eval(current.version, '>=26.3')) { b ->
+		b.replace('import org.lwjgl.glfw.GLFW;', 'import static com.mojang.blaze3d.platform.InputConstants.KEY_H;')
+	}
+
+	replacements.string(eval(current.version, '>=26.3')) { b ->
+		b.replace('org.lwjgl.glfw.GLFW.GLFW_KEY_ESCAPE', 'com.mojang.blaze3d.platform.InputConstants.KEY_ESCAPE')
+	}
+	replacements.string(eval(current.version, '>=26.3')) { b ->
+		b.replace('org.lwjgl.glfw.GLFW.GLFW_KEY_SPACE', 'com.mojang.blaze3d.platform.InputConstants.KEY_SPACE')
+	}
+	replacements.string(eval(current.version, '>=26.3')) { b ->
+		b.replace('org.lwjgl.glfw.GLFW.GLFW_KEY_KP_ENTER', 'com.mojang.blaze3d.platform.InputConstants.KEY_NUMPADENTER')
+	}
+	replacements.string(eval(current.version, '>=26.3')) { b ->
+		b.replace('org.lwjgl.glfw.GLFW.GLFW_KEY_ENTER', 'com.mojang.blaze3d.platform.InputConstants.KEY_RETURN')
+	}
+
+	replacements.string(eval(current.version, '>=26.3')) { b ->
+		b.replace('RenderTypes.entityTranslucentCullItemTarget(', 'RenderTypes.entityTranslucentCull(')
+	}
+
+	replacements.string(eval(current.version, '<1.15')) { b ->
+		b.replace('net.minecraft.world.InteractionResultHolder.success(player.getItemInHand(hand))', 'new net.minecraft.world.InteractionResultHolder<>(net.minecraft.world.InteractionResult.SUCCESS, player.getItemInHand(hand))')
+	}
+	replacements.string(eval(current.version, '<1.15')) { b ->
+		b.replace('net.minecraft.world.InteractionResultHolder.success(stack)', 'new net.minecraft.world.InteractionResultHolder<>(net.minecraft.world.InteractionResult.SUCCESS, stack)')
+	}
+	replacements.string(eval(current.version, '<1.15')) { b ->
+		b.replace('net.minecraft.world.InteractionResultHolder.fail(stack)', 'new net.minecraft.world.InteractionResultHolder<>(net.minecraft.world.InteractionResult.FAIL, stack)')
+	}
+
+	replacements.string(eval(current.version, '<1.15')) { b ->
+		b.replace('player.isShiftKeyDown()', 'player.isSneaking()')
+	}
+
+	replacements.string(eval(current.version, '<1.15')) { b ->
+		b.replace('.noCollission().noOcclusion()', '.noCollission().noCollission()')
+	}
+
+	replacements.string(eval(current.version, '<1.15')) { b ->
+		b.replace('.noOcclusion(), WATER_PUDDLE_KEY))', '.noCollission(), WATER_PUDDLE_KEY))')
+	}
+
+	replacements.string(eval(current.version, '<1.15')) { b ->
+		b.replace('net.minecraft.nbt.StringTag.valueOf(value)', 'new net.minecraft.nbt.StringTag(value)')
+	}
+
+	replacements.string(eval(current.version, '<1.15')) { b ->
+		b.replace('serverLevel.destroyBlock(mutable, true, this)', 'serverLevel.destroyBlock(mutable, true)')
+	}
+}
+
+def supportsSplitEnv = mcVersionAtLeast(project.minecraft_version, '1.18')
+
+def downgradeDistJarToJava8 = project.minecraft_version.startsWith('1.') && !mcVersionAtLeast(project.minecraft_version, '1.17')
+
+loom {
+	if (supportsSplitEnv) {
+		splitEnvironmentSourceSets()
+	}
+
+	def localAccessWidener = file("src/main/resources/mineturismo.accesswidener")
+	accessWidenerPath = localAccessWidener.exists()
+		? localAccessWidener
+		: rootProject.file("src/main/resources/mineturismo.accesswidener")
+
+	if (supportsSplitEnv) {
+		mods {
+			"mineturismo" {
+				sourceSet sourceSets.main
+				sourceSet sourceSets.client
+			}
+		}
+	}
+}
+
+dependencies {
+
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+
+	if (project.minecraft_version.startsWith('1.')) {
+		mappings loom.officialMojangMappings()
+		modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+
+		if (project.minecraft_version == '1.16') {
+
+			def toolAttributeStubJar = file("${buildDir}/generated/fabricToolAttributeStub/fabric-tool-attribute-api-v1-stub.jar")
+			toolAttributeStubJar.parentFile.mkdirs()
+			def toolAttributeStagingDir = file("${buildDir}/generated/fabricToolAttributeStub/staging")
+			toolAttributeStagingDir.deleteDir()
+			toolAttributeStagingDir.mkdirs()
+			new File(toolAttributeStagingDir, 'fabric.mod.json').text = '''{
+	"schemaVersion": 1,
+	"id": "fabric-tool-attribute-api-v1",
+	"name": "Fabric Tool Attribute API (v1) [mineturismo stub - real impl incompatible with vanilla 1.16]",
+	"version": "1.1.4+5794386e83",
+	"environment": "*"
+}
+'''
+			if (toolAttributeStubJar.exists()) {
+				toolAttributeStubJar.delete()
+			}
+			ant.zip(destfile: toolAttributeStubJar, basedir: toolAttributeStagingDir)
+			modImplementation("net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}") {
+				exclude group: 'net.fabricmc.fabric-api', module: 'fabric-tool-attribute-api-v1'
+			}
+			modImplementation(files(toolAttributeStubJar))
+		} else {
+			modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+		}
+	} else {
+		implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+		implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+	}
+}
+
+static boolean mcVersionAtLeast(String version, String threshold) {
+	def toParts = { String v -> v.split('\\.').collect { it.isInteger() ? it.toInteger() : 0 } }
+	def vParts = toParts(version)
+	def tParts = toParts(threshold)
+	int maxLen = Math.max(vParts.size(), tParts.size())
+	for (int i = 0; i < maxLen; i++) {
+		int vp = i < vParts.size() ? vParts[i] : 0
+		int tp = i < tParts.size() ? tParts[i] : 0
+		if (vp != tp) return vp > tp
+	}
+	return true
+}
+
+def fabricApiModId = mcVersionAtLeast(project.minecraft_version, '1.19.3') ? 'fabric-api' : 'fabric'
+
+def includePlayerBodyRotationMixin = mcVersionAtLeast(project.minecraft_version, '1.21.2')
+
+processResources {
+	def version = project.version
+	def minecraftVersion = project.minecraft_version
+
+	def javaVersion = downgradeDistJarToJava8 ? "8" : project.java_version
+	inputs.property "version", version
+	inputs.property "minecraft_version", minecraftVersion
+	inputs.property "java_version", javaVersion
+	inputs.property "fabric_api_mod_id", fabricApiModId
+	inputs.property "include_player_body_rotation_mixin", includePlayerBodyRotationMixin
+
+	filesMatching("fabric.mod.json") {
+		expand "version": version, "minecraft_version": minecraftVersion, "java_version": javaVersion,
+				"fabric_api_mod_id": fabricApiModId
+	}
+
+	def requireNetworkingV1 = !project.minecraft_version.startsWith('1.') || mcVersionAtLeast(project.minecraft_version, '1.16.2')
+	inputs.property "require_networking_v1", requireNetworkingV1
+	doLast {
+		def modJsonFile = new File(destinationDir, "fabric.mod.json")
+		if (requireNetworkingV1 && modJsonFile.exists()) {
+			def modJson = new groovy.json.JsonSlurper().parse(modJsonFile)
+			modJson.depends["fabric-networking-api-v1"] = "*"
+			modJsonFile.text = groovy.json.JsonOutput.prettyPrint(groovy.json.JsonOutput.toJson(modJson))
+		}
+	}
+
+	doLast {
+		def modelsDir = new File(destinationDir, "assets/mineturismo/town_traffic_presets")
+		if (!modelsDir.exists()) {
+			return
+		}
+		def presetsDir = new File(destinationDir, "data/mineturismo/town_traffic_presets")
+		modelsDir.listFiles({ f -> f.name.endsWith(".json") } as FileFilter)?.each { presetFile ->
+			def target = new File(presetsDir, presetFile.name)
+			if (!target.exists()) {
+				presetsDir.mkdirs()
+				target.text = presetFile.text
+				logger.lifecycle("[auto-gen] data/mineturismo/town_traffic_presets/${presetFile.name} (copied from assets; no hand-authored server file found)")
+			}
+		}
+	}
+}
+
+if (!supportsSplitEnv) {
+	processResources {
+		doLast {
+			def modJsonFile = new File(destinationDir, "fabric.mod.json")
+			if (modJsonFile.exists()) {
+				def json = new groovy.json.JsonSlurper().parse(modJsonFile)
+				json.mixins.removeAll { it instanceof Map && it.config == "mineturismo.client.mixins.json" }
+
+				json.mixins << [config: "mineturismo.legacy_client.mixins.json", environment: "client"]
+
+				if (!mcVersionAtLeast(project.minecraft_version, '1.15')) {
+					json.mixins << [config: "mineturismo.legacy114_client.mixins.json", environment: "client"]
+				}
+				modJsonFile.text = groovy.json.JsonOutput.prettyPrint(groovy.json.JsonOutput.toJson(json))
+			}
+		}
+	}
+
+}
+
+def includeMidTexCoordMixin = mcVersionAtLeast(project.minecraft_version, '1.18.2')
+
+def includeItemIconModelMixin = !mcVersionAtLeast(project.minecraft_version, '1.21.4')
+tasks.named(supportsSplitEnv ? 'processClientResources' : 'processResources') {
+	inputs.property "include_player_body_rotation_mixin", includePlayerBodyRotationMixin
+	inputs.property "include_mid_tex_coord_mixin", includeMidTexCoordMixin
+	inputs.property "include_item_icon_model_mixin", includeItemIconModelMixin
+
+	doLast {
+		def mixinsFile = new File(destinationDir, "mineturismo.client.mixins.json")
+		if (mixinsFile.exists() && (!includePlayerBodyRotationMixin || !includeMidTexCoordMixin || !includeItemIconModelMixin)) {
+			def json = new groovy.json.JsonSlurper().parse(mixinsFile)
+			if (!includePlayerBodyRotationMixin) {
+				json.client.remove("PlayerBodyRotationMixin")
+
+				json.client.remove("HumanoidRenderStateMotorcycleMixin")
+			}
+			if (!includeMidTexCoordMixin) {
+				json.client.remove("BufferBuilderMidTexCoordMixin")
+			}
+			if (!includeItemIconModelMixin) {
+				json.client.remove("ItemIconModelMixin")
+			}
+			mixinsFile.text = groovy.json.JsonOutput.prettyPrint(groovy.json.JsonOutput.toJson(json))
+		}
+	}
+}
+
+def needsClientAssetMerge = mcVersionAtLeast(project.minecraft_version, '1.18') && !mcVersionAtLeast(project.minecraft_version, '1.18.2')
+if (needsClientAssetMerge) {
+	tasks.named('runClient') {
+		dependsOn 'generateDLIConfig'
+		doFirst {
+			def launchCfg = rootProject.file(".gradle/loom-cache/projects/${project.name}/launch.cfg")
+			if (!launchCfg.exists()) {
+				logger.warn("[1.18.x blit_screen fix] launch.cfg not found at ${launchCfg}, skipping asset merge")
+				return
+			}
+			def commonJarPath = null
+			def clientJarPath = null
+			launchCfg.eachLine { line ->
+				def trimmed = line.trim()
+				if (trimmed.startsWith('fabric.gameJarPath=')) {
+					commonJarPath = trimmed.substring('fabric.gameJarPath='.length())
+				} else if (trimmed.startsWith('fabric.gameJarPath.client=')) {
+					clientJarPath = trimmed.substring('fabric.gameJarPath.client='.length())
+				}
+			}
+			if (!commonJarPath || !clientJarPath) {
+				logger.warn("[1.18.x blit_screen fix] could not find gameJarPath/gameJarPath.client in launch.cfg, skipping")
+				return
+			}
+			def commonJarFile = new File(commonJarPath)
+			def clientJarFile = new File(clientJarPath)
+			def alreadyPatched = false
+			new java.util.zip.ZipFile(commonJarFile).withCloseable { zf ->
+				alreadyPatched = zf.getEntry('assets/minecraft/shaders/core/blit_screen.json') != null
+			}
+			if (!alreadyPatched) {
+				logger.lifecycle("[1.18.x blit_screen fix] merging client-only assets into common jar for ${project.name} (one-time, ~1-2min)...")
+				def mergeTempDir = new File(temporaryDir, 'client_asset_merge')
+				project.delete(mergeTempDir)
+				mergeTempDir.mkdirs()
+				project.copy {
+					from project.zipTree(clientJarFile)
+					include 'assets/**'
+					into mergeTempDir
+				}
+				ant.jar(destfile: commonJarFile.absolutePath, update: true) {
+					fileset(dir: mergeTempDir.absolutePath)
+				}
+				logger.lifecycle("[1.18.x blit_screen fix] merge complete for ${project.name}")
+			}
+		}
+	}
+
+}
+
+def javaVersionInt = project.java_version.toInteger()
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = javaVersionInt
+}
+
+def mixinCompatJava = downgradeDistJarToJava8 ? 8 : Math.min(javaVersionInt, 21)
+tasks.withType(ProcessResources).configureEach {
+	inputs.property "mixin_compat_java", mixinCompatJava
+	filesMatching("*.mixins.json") {
+		filter { String line -> line.replaceAll(/"JAVA_\d+"/, "\"JAVA_${mixinCompatJava}\"") }
+	}
+}
+
+if (downgradeDistJarToJava8) {
+	apply plugin: 'xyz.wagyourtail.jvmdowngrader'
+
+	jvmdg {
+		downgradeTo = JavaVersion.VERSION_1_8
+	}
+
+	tasks.named('downgradeJar') {
+		inputFile = tasks.jar.archiveFile
+		downgradeTo = JavaVersion.VERSION_1_8
+		archiveClassifier = 'downgraded-8'
+		destinationDirectory = layout.buildDirectory.dir('jvmdg')
+	}
+
+	tasks.named('shadeDowngradedApi') {
+		inputFile = tasks.downgradeJar.archiveFile
+		archiveClassifier = 'downgraded-8-shaded'
+		destinationDirectory = layout.buildDirectory.dir('jvmdg')
+	}
+
+	tasks.named('remapJar') {
+		dependsOn tasks.shadeDowngradedApi
+		inputFile = tasks.shadeDowngradedApi.archiveFile
+	}
+}
+
+java {
+
+	withSourcesJar()
+
+	sourceCompatibility = JavaVersion.toVersion(javaVersionInt)
+	targetCompatibility = JavaVersion.toVersion(javaVersionInt)
+}
+
+tasks.withType(Jar).configureEach {
+	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+jar {
+	def projectName = 'mineturismo'
+	inputs.property "projectName", projectName
+
+	from(rootProject.file("DANCING_SCRIPT_FONT_LICENSE.txt"))
+
+	from(rootProject.file("RUSSO_ONE_FONT_LICENSE.txt"))
+	from(rootProject.file("BUNGEE_FONT_LICENSE.txt"))
+	from(rootProject.file("LATO_FONT_LICENSE.txt"))
+
+	from(rootProject.file("LICENSE")) {
+		rename { "${it}_$projectName"}
+	}
+
+	doLast {
+		def jarFile = archiveFile.get().asFile
+		def zip = new java.util.zip.ZipFile(jarFile)
+		try {
+			def readJson = { String name ->
+				def entry = zip.getEntry(name)
+				entry == null ? null : new groovy.json.JsonSlurper().parse(zip.getInputStream(entry))
+			}
+			def modJson = readJson("fabric.mod.json")
+			def missing = []
+			(modJson?.mixins ?: []).collect { it instanceof Map ? it.config : it }.each { String config ->
+				def mixinJson = readJson(config)
+				if (mixinJson == null) {
+					missing << "${config} (config file itself)"
+					return
+				}
+				def pkg = mixinJson.package.replace('.', '/')
+				(['mixins', 'client', 'server'].collectMany { mixinJson[it] ?: [] }).each { String name ->
+					if (zip.getEntry("${pkg}/${name.replace('.', '/')}.class") == null) {
+						missing << "${config}: ${name}"
+					}
+				}
+			}
+			if (!missing.isEmpty()) {
+				throw new GradleException("Mixins listed in config but not compiled for ${project.minecraft_version}: ${missing}")
+			}
+		} finally {
+			zip.close()
+		}
+	}
+}
+
+publishing {
+	publications {
+		create("mavenJava", MavenPublication) {
+			from components.java
+		}
+	}
+
+	repositories {
+
+	}
+}
+
+tasks.register('collectJars', Copy) {
+	group = 'distribution'
+	description = 'Copies every version\'s remapped jar into dist/'
+
+	rootProject.subprojects.each { sub ->
+
+		if (sub.name.startsWith('1.')) {
+			dependsOn "${sub.path}:remapJar"
+		} else {
+			dependsOn "${sub.path}:jar"
+		}
+		from(fileTree(dir: "${sub.projectDir}/build/libs"))
+	}
+	include '*+*.jar'
+	exclude '*-sources.jar'
+
+	into "${rootDir}/dist"
+}
+
+def stripJavaComments = { String src ->
+
+	final char SLASH = '/' as char
+	final char STAR = '*' as char
+	final char NEWLINE = '\n' as char
+	final char DQUOTE = '"' as char
+	final char SQUOTE = '\'' as char
+	final char BACKSLASH = '\\' as char
+	def out = new StringBuilder(src.length())
+	int i = 0
+	int n = src.length()
+	while (i < n) {
+		char c = src.charAt(i)
+		boolean hasNext = i + 1 < n
+		char next = hasNext ? src.charAt(i + 1) : c
+		if (c == SLASH && hasNext && next == SLASH) {
+
+			while (i < n && src.charAt(i) != NEWLINE) { i++ }
+		} else if (c == SLASH && hasNext && next == STAR) {
+
+			i += 2
+			while (i < n && !(src.charAt(i) == STAR && i + 1 < n && src.charAt(i + 1) == SLASH)) { i++ }
+			i = Math.min(n, i + 2)
+			out.append(' ')
+		} else if (c == DQUOTE && src.startsWith('"""', i)) {
+
+			int end = src.indexOf('"""', i + 3)
+			end = end < 0 ? n : end + 3
+			out.append(src, i, end)
+			i = end
+		} else if (c == DQUOTE || c == SQUOTE) {
+
+			char quote = c
+			out.append(c)
+			i++
+			while (i < n) {
+				char d = src.charAt(i)
+				out.append(d)
+				i++
+				if (d == BACKSLASH && i < n) {
+					out.append(src.charAt(i))
+					i++
+				} else if (d == quote || d == NEWLINE) {
+					break
+				}
+			}
+		} else {
+			out.append(c)
+			i++
+		}
+	}
+
+	def lines = out.toString().replace('\r\n', '\n').split('\n', -1).collect { it.replaceAll(/[ \t]+$/, '') }
+	def result = new StringBuilder()
+	boolean previousBlank = false
+	lines.each { line ->
+		boolean blank = line.isEmpty()
+		if (!(blank && previousBlank)) {
+			result.append(line).append('\n')
+		}
+		previousBlank = blank
+	}
+	return result.toString().replaceAll(/^\n+/, '')
+}
+
+tasks.register('publicJars') {
+	group = 'distribution'
+	description = 'Writes dist/public/: every version\'s jar plus a comment-stripped sources jar (for addon authors)'
+	dependsOn 'collectJars'
+
+	rootProject.subprojects.each { sub ->
+		dependsOn(sub.name.startsWith('1.') ? "${sub.path}:remapSourcesJar" : "${sub.path}:sourcesJar")
+	}
+
+	doLast {
+		def distDir = file("${rootDir}/dist")
+		def publicDir = file("${rootDir}/dist/public")
+		publicDir.mkdirs()
+		int count = 0
+		def sourcesJars = rootProject.subprojects.collect { sub ->
+			def libs = new File(sub.projectDir, 'build/libs')
+			libs.isDirectory() ? libs.listFiles().findAll { it.isFile() && it.name.contains('+') && it.name.endsWith('-sources.jar') } : []
+		}.flatten()
+		sourcesJars.sort { it.name }.each { sourcesJar ->
+			def mainJar = new File(distDir, sourcesJar.name.replace('-sources.jar', '.jar'))
+			if (!mainJar.exists()) {
+				throw new GradleException("main jar missing for ${sourcesJar.name}")
+			}
+
+			def publicMain = new File(publicDir, mainJar.name).toPath()
+			java.nio.file.Files.deleteIfExists(publicMain)
+			try {
+				java.nio.file.Files.createLink(publicMain, mainJar.toPath())
+			} catch (Exception ignored) {
+				java.nio.file.Files.copy(mainJar.toPath(), publicMain)
+			}
+			def target = new File(publicDir, sourcesJar.name)
+			new java.util.zip.ZipFile(sourcesJar).withCloseable { zip ->
+				new java.util.zip.ZipOutputStream(new FileOutputStream(target)).withCloseable { zos ->
+
+					zip.entries().findAll { !it.name.startsWith('assets/') && !it.name.startsWith('data/') }.each { java.util.zip.ZipEntry entry ->
+						def copy = new java.util.zip.ZipEntry(entry.name)
+						copy.time = entry.time
+						zos.putNextEntry(copy)
+						if (!entry.directory) {
+							byte[] bytes = zip.getInputStream(entry).bytes
+							if (entry.name.endsWith('.java')) {
+								bytes = stripJavaComments(new String(bytes, 'UTF-8')).getBytes('UTF-8')
+							}
+							zos.write(bytes)
+						}
+						zos.closeEntry()
+					}
+				}
+			}
+			count++
+		}
+		logger.lifecycle("publicJars: wrote ${count} jar + stripped sources jar pairs to ${publicDir}")
+	}
+}

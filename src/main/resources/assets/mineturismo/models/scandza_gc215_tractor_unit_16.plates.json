@@ -1,0 +1,18 @@
+{
+  "frontX": -0.33,
+  "frontY": 0.408,
+  "frontZ": 2.395,
+  "frontScale": 0.42,
+  "frontYaw": -1.0,
+  "frontPitch": 0.0,
+  "frontRoll": 0.0,
+  "rearX": 0.0,
+  "rearY": 0.328,
+  "rearZ": -2.216,
+  "rearScale": 0.42,
+  "rearYaw": 0.0,
+  "rearPitch": 0.0,
+  "rearRoll": 0.0,
+  "frontPlateId": "yokohama",
+  "rearPlateId": "mineturismo_white"
+}

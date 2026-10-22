@@ -1,0 +1,28 @@
+{
+  "liveries": [
+    "black",
+    "white",
+    "cyan gray",
+    "red",
+    "champagne",
+    "light gray",
+    "blue",
+    "custom",
+    "c2"
+  ],
+  "liveryLabels": [
+    "black",
+    "white",
+    "cyan gray",
+    "red",
+    "champagne",
+    "light gray",
+    "blue",
+    "custom",
+    "c2"
+  ],
+  "decalLiveries": [
+    "custom",
+    "c2"
+  ]
+}

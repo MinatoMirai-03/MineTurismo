@@ -1,0 +1,20 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "mineturismo:item/boxed_car"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1
+      },
+      "model": "mineturismo:item/vehicle_spawn_key"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 3
+      },
+      "model": "mineturismo:item/vehicle_smart_key"
+    }
+  ]
+}

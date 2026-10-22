@@ -1,0 +1,10 @@
+{
+  "wheelModelId": "supercar_wheel1",
+  "frontZ": 1.12,
+  "rearZ": -1.41,
+  "trackHalfWidth": 0.85,
+  "axleHeight": 0.31,
+  "wheelRadius": 0.35,
+  "bodyHeight": 0.04,
+  "wheelScale": 0.95
+}

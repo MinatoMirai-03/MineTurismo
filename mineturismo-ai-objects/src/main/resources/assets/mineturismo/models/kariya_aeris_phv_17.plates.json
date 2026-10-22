@@ -1,0 +1,18 @@
+{
+  "frontX": 0.0,
+  "frontY": 0.376,
+  "frontZ": 2.26,
+  "frontScale": 0.378,
+  "frontYaw": 0.0,
+  "frontPitch": 0.0,
+  "frontRoll": 0.0,
+  "rearX": 0.0,
+  "rearY": 0.776,
+  "rearZ": -2.175,
+  "rearScale": 0.378,
+  "rearYaw": 0.0,
+  "rearPitch": 0.0,
+  "rearRoll": 0.0,
+  "frontPlateId": "toyota",
+  "rearPlateId": "toyota"
+}

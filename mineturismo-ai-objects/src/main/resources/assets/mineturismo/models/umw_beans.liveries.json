@@ -1,0 +1,5 @@
+{
+  "liveries": ["17_umw_beans", "17_umw_beans_blue", "17_umw_beans_gray", "17_umw_beans_light_blue", "17_umw_beans_orange", "17_umw_beans_custom", "17_umw_beans_white", "17_umw_beans_yellow"],
+  "liveryLabels": ["Default", "Blue", "Gray", "Light Blue", "Orange", "Custom", "White", "Yellow"],
+  "decalLiveries": ["17_umw_beans_custom"]
+}

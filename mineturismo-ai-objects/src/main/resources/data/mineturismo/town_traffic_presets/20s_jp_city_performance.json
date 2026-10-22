@@ -1,0 +1,6 @@
+{
+  "label": "'20s JP City - Performance",
+  "normalModelIds": ["kariya_azusa", "umw_beans", "kariya_azurite", "kariya_traffic_cab_17", "kawaguchi_kamari_17", "scandza_gc215_tractor_unit_16"],
+  "rareModelIds": ["cycas_pixel_van"],
+  "default": false
+}

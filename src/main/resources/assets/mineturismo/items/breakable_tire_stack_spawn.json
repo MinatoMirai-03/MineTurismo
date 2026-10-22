@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "mineturismo:item/breakable_tire_stack_spawn"
+  }
+}

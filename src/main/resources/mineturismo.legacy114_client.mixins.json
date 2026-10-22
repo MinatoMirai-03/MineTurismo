@@ -1,0 +1,16 @@
+{
+	"required": true,
+	"package": "com.examplebett.client.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"client": [
+		"RendererRegistrationMixin",
+		"GuiHudMixin",
+		"BlockRenderLayerMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}

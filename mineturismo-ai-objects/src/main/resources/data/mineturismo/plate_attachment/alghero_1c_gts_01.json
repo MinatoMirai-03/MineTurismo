@@ -1,0 +1,18 @@
+{
+  "frontX": 0.45,
+  "frontY": 0.43,
+  "frontZ": 1.97,
+  "frontScale": 0.4,
+  "frontYaw": 10.0,
+  "frontPitch": 0.0,
+  "frontRoll": 0.0,
+  "rearX": 0.0,
+  "rearY": 0.47,
+  "rearZ": -2.0,
+  "rearScale": 0.65,
+  "rearYaw": 0.0,
+  "rearPitch": 0.0,
+  "rearRoll": 0.0,
+  "frontPlateId": "germany",
+  "rearPlateId": "germany"
+}

@@ -1,0 +1,10 @@
+{
+  "wheelModelId": "steel_wheel",
+  "frontZ": 1.45,
+  "rearZ": -1.41,
+  "trackHalfWidth": 0.8,
+  "axleHeight": 0.34,
+  "wheelRadius": 0.35,
+  "bodyHeight": -0.01,
+  "wheelScale": 0.98
+}

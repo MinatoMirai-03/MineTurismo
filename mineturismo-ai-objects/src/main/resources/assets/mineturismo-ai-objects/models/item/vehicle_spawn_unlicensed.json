@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "mineturismo-ai-objects:item/vehicle_spawn_unlicensed"
+  }
+}

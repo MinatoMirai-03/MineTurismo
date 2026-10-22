@@ -1,0 +1,18 @@
+{
+  "frontX": 0.0,
+  "frontY": 0.34,
+  "frontZ": 1.9,
+  "frontScale": 0.4,
+  "frontYaw": 0.0,
+  "frontPitch": 0.0,
+  "frontRoll": 0.0,
+  "rearX": 0.0,
+  "rearY": 0.74,
+  "rearZ": -1.84,
+  "rearScale": 0.4,
+  "rearYaw": 0.0,
+  "rearPitch": -15.0,
+  "rearRoll": 0.0,
+  "frontPlateId": "suginami",
+  "rearPlateId": "suginami"
+}

@@ -1,0 +1,6 @@
+{
+  "label": "Core Vehicles Only",
+  "normalModelIds": ["cycas_pixel_van", "flatiron_opossum", "kawaguchi_kamari_17", "scandza_gc215_tractor_unit_16"],
+  "rareModelIds": [],
+  "default": true
+}

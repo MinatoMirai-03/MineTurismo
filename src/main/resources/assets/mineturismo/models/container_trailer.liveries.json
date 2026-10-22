@@ -1,0 +1,5 @@
+{
+  "liveries": ["container_trailer", "container_trailer_custom", "container_trailer_gray", "container_trailer_light_gray", "container_trailer_magenta", "container_trailer_red", "container_trailer_white"],
+  "liveryLabels": ["Default", "Custom", "Gray", "Light Gray", "Magenta", "Red", "White"],
+  "decalLiveries": ["container_trailer_custom"]
+}

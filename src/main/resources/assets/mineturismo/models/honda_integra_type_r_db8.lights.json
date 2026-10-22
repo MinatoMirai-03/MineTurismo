@@ -1,0 +1,5 @@
+{
+  "headlightX": 0.6, "headlightY": 0.6, "headlightZ": 2.1,
+  "taillightX": 0.4, "taillightY": 0.8, "taillightZ": -2.0,
+  "headlightColorId": "current"
+}

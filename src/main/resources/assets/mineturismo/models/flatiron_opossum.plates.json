@@ -1,0 +1,5 @@
+{
+  "frontX": 0.0, "frontY": -0.54, "frontZ": 2.31, "frontScale": 0.426, "frontYaw": 0.0, "frontPitch": 0.0, "frontRoll": 0.0,
+  "rearX": 0.0, "rearY": -0.66, "rearZ": -2.3, "rearScale": 0.426, "rearYaw": 0.0, "rearPitch": 0.0, "rearRoll": 0.0,
+  "frontPlateId": "newyork", "rearPlateId": "newyork"
+}

@@ -1,0 +1,29 @@
+{
+	"schemaVersion": 1,
+	"id": "mineturismo-ai-objects",
+	"version": "${version}",
+	"name": "MineTurismo AI Objects",
+	"description": "Additional vehicles for MineTurismo (requires MineTurismo). Most of the vehicles in this add-on were created with AI.",
+	"authors": [
+		"MinatoMirai"
+	],
+	"contact": {
+		"homepage": "https://github.com/MinatoMirai-03/MineTurismo",
+		"sources": "https://github.com/MinatoMirai-03/MineTurismo",
+		"issues": "https://github.com/MinatoMirai-03/MineTurismo/issues"
+	},
+	"license": "LicenseRef-MineTurismo",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.mineturismo.aiobjects.MineturismoAiObjects"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.17.3",
+		"minecraft": "~${minecraft_version}",
+		"java": ">=${java_version}",
+		"${fabric_api_mod_id}": "*",
+		"mineturismo": ">=1.0.0"
+	}
+}

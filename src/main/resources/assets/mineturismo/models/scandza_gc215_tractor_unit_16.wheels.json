@@ -1,0 +1,10 @@
+{
+  "wheelModelId": "steelie",
+  "frontZ": 1.252,
+  "rearZ": -1.5,
+  "trackHalfWidth": 0.847,
+  "axleHeight": 0.424,
+  "wheelRadius": 0.614,
+  "carScale": 1.1,
+  "wheelScale": 1.16
+}

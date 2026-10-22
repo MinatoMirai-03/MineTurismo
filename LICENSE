@@ -1,0 +1,61 @@
+MineTurismo License
+
+Copyright (c) 2026 MinatoMirai
+https://github.com/MinatoMirai-03/MineTurismo
+
+This license applies to the Minecraft mod "MineTurismo" and its official add-on
+"MineTurismo AI Objects" (together, "the Mod", including its program, source code, models,
+textures, sounds and all other included files, except the third-party works listed in
+section 4). All rights not expressly granted below are reserved by the author.
+
+1. You MAY:
+  (1) Download the Mod and use it in single-player and multiplayer (servers).
+  (2) Use the Mod commercially, including monetized videos and streams, running servers that
+      use the Mod, and selling add-ons. However, commercial use of Minecraft is restricted by
+      Microsoft/Mojang. You must check and follow:
+        - Minecraft End User License Agreement: https://www.minecraft.net/eula
+        - Minecraft Usage Guidelines: https://www.minecraft.net/usage-guidelines
+  (3) Create and distribute add-ons that depend on the Mod (additional vehicles, parts, data,
+      resources, etc.), provided that ALL of the following are met:
+        - The add-on does not contain any files of the Mod (jar, source code, models,
+          textures, sounds, etc.). Users must obtain the Mod from its official download page.
+        - The add-on does not modify the Mod's program (classes). Injecting into, replacing or
+          altering the Mod's classes (e.g. with Mixins) is prohibited. Using the data/resource
+          extension mechanisms provided by the Mod is allowed.
+        - You may read the published source code to learn how to make add-ons, but you may not
+          copy any part of it into your add-on.
+  (4) Modify the Mod and use the modified version privately (distribution is not allowed).
+  (5) Include the Mod in modpacks only by referencing its official download page (formats in
+      which the user's launcher obtains the Mod from the official project page).
+
+2. You MAY NOT:
+  (1) Redistribute the Mod (upload or distribute its jar or files, modified or not, to any
+      other site, server, storage, etc.).
+  (2) Distribute modified or derivative versions of the Mod.
+  (3) Bundle the Mod's jar itself in a modpack.
+  (4) Copy or reuse the Mod's source code, models, textures, sounds, etc. in other mods,
+      add-ons or works.
+  (5) Publish or distribute the Mod as if it were your own work.
+
+3. Disclaimer
+  The Mod is provided "AS IS", without warranty of any kind, express or implied. The author is
+  not liable for any damage arising from the use of or inability to use the Mod (including
+  corruption of world data).
+
+4. Other
+  - Most of the Mod's source code and most of the vehicles in the official add-on
+    "MineTurismo AI Objects" were created using generative AI tools. Only 5 of the vehicles in
+    "MineTurismo" itself were created with AI; most of the others are the work of human creators.
+  - Some 3D vehicle models in "MineTurismo" are works by Lexyc16
+    (https://sketchfab.com/Lexyc16), Fenrate (https://sketchfab.com/Fenrate) and iSteven
+    (https://sketchfab.com/OneSteven),
+    licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0,
+    https://creativecommons.org/licenses/by/4.0/). They have been modified for use in the Mod.
+    These models are licensed under CC BY 4.0, not under this license, and the restrictions in
+    section 2 do not apply to them.
+  - The bundled fonts are licensed under their own licenses (SIL Open Font License 1.1, see the
+    included *_FONT_LICENSE.txt files). This license does not apply to them.
+  - Real car names and company names appearing in the Mod are trademarks or registered
+    trademarks of their respective owners. The Mod is not affiliated with or endorsed by them.
+  - NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.
+  - The author may change this license in the future.

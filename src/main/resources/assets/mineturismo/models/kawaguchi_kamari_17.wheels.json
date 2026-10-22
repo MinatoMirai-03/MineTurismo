@@ -1,0 +1,12 @@
+{
+  "wheelModelId": "mc_front_wheel",
+  "frontZ": 0.735,
+  "rearZ": -0.743,
+  "trackHalfWidth": 0.0,
+  "axleHeight": 0.31,
+  "wheelRadius": 0.349,
+  "bodyHeight": -0.01,
+  "singleWheelPerAxle": true,
+  "passengerY": 0.75,
+  "wheelScale": 0.96
+}
