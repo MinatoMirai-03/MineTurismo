@@ -1,0 +1,32 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "mineturismo:item/popphone_6"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1001
+      },
+      "model": "mineturismo:item/popphone_3"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 1002
+      },
+      "model": "mineturismo:item/popphone_6"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 1003
+      },
+      "model": "mineturismo:item/popphone_18"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 1004
+      },
+      "model": "mineturismo:item/popphone_classic"
+    }
+  ]
+}

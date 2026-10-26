@@ -1,0 +1,18 @@
+{
+  "frontX": 0.0,
+  "frontY": -0.35,
+  "frontZ": 1.91,
+  "frontScale": 0.65,
+  "frontYaw": 0.0,
+  "frontPitch": 0.0,
+  "frontRoll": 0.0,
+  "rearX": 0.01,
+  "rearY": -0.05,
+  "rearZ": -1.8,
+  "rearScale": 0.65,
+  "rearYaw": 0.0,
+  "rearPitch": -22.0,
+  "rearRoll": 0.0,
+  "frontPlateId": "unitedkingdom_front",
+  "rearPlateId": "unitedkingdom"
+}

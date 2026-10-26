@@ -1,0 +1,13 @@
+{
+  "common": [
+    "black",
+    "white",
+    "cyan gray",
+    "red",
+    "champagne",
+    "light gray"
+  ],
+  "rare": [
+    "blue"
+  ]
+}

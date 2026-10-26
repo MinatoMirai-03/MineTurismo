@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "mineturismo:item/vehicle_icons/tesla_cybertruck"
+  }
+}

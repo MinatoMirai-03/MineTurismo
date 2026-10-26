@@ -1,0 +1,10 @@
+{
+  "wheelModelId": "redline_wheel",
+  "frontZ": 1.25,
+  "rearZ": -1.29,
+  "trackHalfWidth": 0.72,
+  "axleHeight": 0.31,
+  "wheelRadius": 0.35,
+  "bodyHeight": 0.72,
+  "wheelScale": 0.87
+}

@@ -1,0 +1,25 @@
+{
+  "liveries": [
+    "default",
+    "custom",
+    "lime",
+    "red",
+    "steal",
+    "silver",
+    "black",
+    "white"
+  ],
+  "liveryLabels": [
+    "default",
+    "custom",
+    "lime",
+    "red",
+    "steal",
+    "silver",
+    "black",
+    "white"
+  ],
+  "decalLiveries": [
+    "custom"
+  ]
+}

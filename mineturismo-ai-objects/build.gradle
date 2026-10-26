@@ -1,0 +1,208 @@
+import groovy.json.JsonBuilder
+import groovy.json.JsonSlurper
+
+plugins {
+	id 'maven-publish'
+}
+
+stonecutter {
+	replacements.string(eval(current.version, '>=1.21.11')) { b ->
+		b.replace('ResourceLocation', 'Identifier')
+	}
+}
+
+apply plugin: project.minecraft_version.startsWith('1.') ? 'net.fabricmc.fabric-loom-remap' : 'net.fabricmc.fabric-loom'
+
+version = "${project.mod_version}+${project.minecraft_version}"
+group = project.maven_group
+
+base {
+	archivesName = 'mineturismo-ai-objects'
+}
+
+repositories {
+
+	flatDir {
+		dirs("${rootDir}/../versions/${project.minecraft_version}/build/libs")
+	}
+}
+
+dependencies {
+
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+
+	if (project.minecraft_version.startsWith('1.')) {
+		mappings loom.officialMojangMappings()
+		modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+		modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+		modImplementation "com.examplebett:mineturismo:${project.mineturismo_version}"
+	} else {
+		implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+		implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+		implementation "com.examplebett:mineturismo:${project.mineturismo_version}"
+	}
+}
+
+static boolean mcVersionAtLeast(String version, String threshold) {
+	def toParts = { String v -> v.split('\\.').collect { it.isInteger() ? it.toInteger() : 0 } }
+	def vParts = toParts(version)
+	def tParts = toParts(threshold)
+	int maxLen = Math.max(vParts.size(), tParts.size())
+	for (int i = 0; i < maxLen; i++) {
+		int vp = i < vParts.size() ? vParts[i] : 0
+		int tp = i < tParts.size() ? tParts[i] : 0
+		if (vp != tp) return vp > tp
+	}
+	return true
+}
+
+def fabricApiModId = mcVersionAtLeast(project.minecraft_version, '1.19.3') ? 'fabric-api' : 'fabric'
+
+def downgradeDistJarToJava8 = project.minecraft_version.startsWith('1.') && !mcVersionAtLeast(project.minecraft_version, '1.17')
+
+processResources {
+	def version = project.version
+	def minecraftVersion = project.minecraft_version
+
+	def javaVersion = downgradeDistJarToJava8 ? "8" : project.java_version
+	inputs.property "version", version
+	inputs.property "minecraft_version", minecraftVersion
+	inputs.property "java_version", javaVersion
+	inputs.property "fabric_api_mod_id", fabricApiModId
+
+	filesMatching("fabric.mod.json") {
+		expand "version": version, "minecraft_version": minecraftVersion, "java_version": javaVersion,
+				"fabric_api_mod_id": fabricApiModId
+	}
+
+	doLast {
+		def modelsDir = new File(destinationDir, "assets/mineturismo/models")
+		if (!modelsDir.exists()) {
+			return
+		}
+
+		def plateAttachmentDir = new File(destinationDir, "data/mineturismo/plate_attachment")
+		modelsDir.listFiles({ f -> f.name.endsWith(".plates.json") } as FileFilter)?.each { platesFile ->
+			def modelId = platesFile.name.substring(0, platesFile.name.length() - ".plates.json".length())
+			def target = new File(plateAttachmentDir, "${modelId}.json")
+			if (!target.exists()) {
+				plateAttachmentDir.mkdirs()
+				target.text = platesFile.text
+				logger.lifecycle("[auto-gen] data/mineturismo/plate_attachment/${modelId}.json (copied from ${modelId}.plates.json; no hand-authored server file found)")
+			}
+		}
+
+		def trafficLiveriesDir = new File(destinationDir, "data/mineturismo/traffic_liveries")
+		modelsDir.listFiles({ f -> f.name.endsWith(".liveries.json") } as FileFilter)?.each { liveriesFile ->
+			def modelId = liveriesFile.name.substring(0, liveriesFile.name.length() - ".liveries.json".length())
+			def target = new File(trafficLiveriesDir, "${modelId}.json")
+			if (!target.exists()) {
+				def json = new JsonSlurper().parse(liveriesFile)
+				def decalIds = (json.decalLiveries ?: []) as Set
+				def common = (json.liveries ?: []).findAll { !decalIds.contains(it) }
+				if (!common.isEmpty()) {
+					trafficLiveriesDir.mkdirs()
+					target.text = new JsonBuilder([common: common, rare: []]).toPrettyString()
+					logger.lifecycle("[auto-gen] data/mineturismo/traffic_liveries/${modelId}.json (all non-decal liveries as common, no curated rarity; no hand-authored server file found)")
+				}
+			}
+		}
+
+		def presetsSrcDir = new File(destinationDir, "assets/mineturismo/town_traffic_presets")
+		if (presetsSrcDir.exists()) {
+			def presetsDir = new File(destinationDir, "data/mineturismo/town_traffic_presets")
+			presetsSrcDir.listFiles({ f -> f.name.endsWith(".json") } as FileFilter)?.each { presetFile ->
+				def target = new File(presetsDir, presetFile.name)
+				if (!target.exists()) {
+					presetsDir.mkdirs()
+					target.text = presetFile.text
+					logger.lifecycle("[auto-gen] data/mineturismo/town_traffic_presets/${presetFile.name} (copied from assets; no hand-authored server file found)")
+				}
+			}
+		}
+
+		if (!mcVersionAtLeast(minecraftVersion, '1.21.4')) {
+			new File(destinationDir, "assets").listFiles()?.each { nsDir ->
+				def itemsDir = new File(nsDir, "items")
+				if (!itemsDir.isDirectory()) {
+					return
+				}
+				def itemModelsDir = new File(nsDir, "models/item")
+				itemsDir.listFiles({ f -> f.name.endsWith(".json") } as FileFilter)?.each { itemFile ->
+					def target = new File(itemModelsDir, itemFile.name)
+					def model = new JsonSlurper().parse(itemFile)?.model
+					if (!target.exists() && model?.type == 'minecraft:model' && model?.model) {
+						itemModelsDir.mkdirs()
+						target.text = new JsonBuilder([parent: model.model]).toPrettyString()
+					}
+				}
+			}
+		}
+	}
+}
+
+def javaVersionInt = project.java_version.toInteger()
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = javaVersionInt
+}
+
+java {
+
+	withSourcesJar()
+
+	sourceCompatibility = JavaVersion.toVersion(javaVersionInt)
+	targetCompatibility = JavaVersion.toVersion(javaVersionInt)
+}
+
+def distDir = "${rootDir}/dist"
+
+if (downgradeDistJarToJava8) {
+	apply plugin: 'xyz.wagyourtail.jvmdowngrader'
+
+	jvmdg {
+		downgradeTo = JavaVersion.VERSION_1_8
+	}
+
+	tasks.named('downgradeJar') {
+		inputFile = tasks.jar.archiveFile
+		downgradeTo = JavaVersion.VERSION_1_8
+		archiveClassifier = 'downgraded-8'
+		destinationDirectory = layout.buildDirectory.dir('jvmdg')
+	}
+
+	tasks.named('shadeDowngradedApi') {
+		inputFile = tasks.downgradeJar.archiveFile
+		archiveClassifier = 'downgraded-8-shaded'
+		destinationDirectory = layout.buildDirectory.dir('jvmdg')
+	}
+
+	tasks.named('remapJar') {
+		dependsOn tasks.shadeDowngradedApi
+		inputFile = tasks.shadeDowngradedApi.archiveFile
+	}
+}
+
+if (project.minecraft_version.startsWith('1.')) {
+	tasks.named('remapJar') { destinationDirectory = file(distDir) }
+} else {
+	tasks.named('jar') { destinationDirectory = file(distDir) }
+}
+
+tasks.named('jar') {
+	from(rootProject.file("../LICENSE")) {
+		rename { "LICENSE_mineturismo-ai-objects" }
+	}
+}
+
+publishing {
+	publications {
+		create("mavenJava", MavenPublication) {
+			from components.java
+		}
+	}
+
+	repositories {
+
+	}
+}

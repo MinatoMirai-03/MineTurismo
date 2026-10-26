@@ -1,0 +1,24 @@
+{
+	"required": true,
+	"package": "com.examplebett.client.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"client": [
+		"CameraMixin",
+		"AbstractSoundInstanceAccessor",
+		"EngineBroadcastMuteMixin",
+		"EntityRendererMixin",
+		"PlayerItemInHandLayerMixin",
+		"PlayerArmorLayerMixin",
+		"PlayerElytraLayerMixin",
+		"PlayerBikeLeanMixin",
+		"PlayerBikeLegOffsetMixin",
+		"ItemIconModelMixin",
+		"MusicManagerMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}

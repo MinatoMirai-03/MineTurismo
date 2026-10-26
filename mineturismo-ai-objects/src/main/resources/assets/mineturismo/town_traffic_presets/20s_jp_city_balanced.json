@@ -1,0 +1,6 @@
+{
+  "label": "'20s JP City - Balanced",
+  "normalModelIds": ["kariya_azusa", "umw_beans", "kariya_azurite", "kariya_abyss_20", "misuzu_mega_17", "mercedes_benz_gclass", "kariya_traffic_cab_17", "kawaguchi_kamari_17"],
+  "rareModelIds": ["cycas_pixel_van", "ponta_epic_type_a", "nittaku_weed", "honda_nsx_1990", "toyota_supra_a80_1993", "nissan_skyline_r32_gtr", "mazda_rx7_fd", "nissan_skyline_r34_gtr", "flatiron_odd_cruiser"],
+  "default": false
+}

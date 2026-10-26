@@ -1,0 +1,9 @@
+{
+  "wheelModelId": "kariya_wheel_modern",
+  "wheelStyles": ["kariya_wheel_modern", "kariya_wheel_suv", "none"],
+  "frontZ": 6.0,
+  "rearZ": -6.0,
+  "trackHalfWidth": 1.0,
+  "axleHeight": 0.4,
+  "wheelRadius": 0.35
+}

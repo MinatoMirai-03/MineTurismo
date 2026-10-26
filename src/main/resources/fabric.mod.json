@@ -1,0 +1,43 @@
+{
+	"schemaVersion": 1,
+	"id": "mineturismo",
+	"provides": [
+		"ai-object-mod"
+	],
+	"version": "${version}",
+	"name": "MineTurismo",
+	"description": "Drivable cars, motorcycles, trucks and helicopters with deep customization (paint, plates, lights, parts and more), AI town traffic and railways, and an in-game smartphone app. Most of the source code was created with AI; most of the vehicles in this mod are the work of human creators (only 5 were made with AI).",
+	"authors": [
+		"MinatoMirai"
+	],
+	"contact": {
+		"homepage": "https://github.com/MinatoMirai-03/MineTurismo",
+		"sources": "https://github.com/MinatoMirai-03/MineTurismo",
+		"issues": "https://github.com/MinatoMirai-03/MineTurismo/issues"
+	},
+	"license": "LicenseRef-MineTurismo",
+	"icon": "assets/mineturismo/icon.png",
+	"accessWidener": "mineturismo.accesswidener",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.examplebett.AiObjectMod"
+		],
+		"client": [
+			"com.examplebett.client.AiObjectModClient"
+		]
+	},
+	"mixins": [
+		"mineturismo.mixins.json",
+		{
+			"config": "mineturismo.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=${fabric_loader_min}",
+		"minecraft": "${minecraft_version}",
+		"java": ">=${java_version}",
+		"${fabric_api_mod_id}": "*"
+	}
+}

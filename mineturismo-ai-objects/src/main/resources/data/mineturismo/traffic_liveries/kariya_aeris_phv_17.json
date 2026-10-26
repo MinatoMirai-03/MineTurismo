@@ -1,0 +1,13 @@
+{
+  "common": [
+    "default",
+    "red",
+    "steal",
+    "silver",
+    "black",
+    "white"
+  ],
+  "rare": [
+    "lime"
+  ]
+}

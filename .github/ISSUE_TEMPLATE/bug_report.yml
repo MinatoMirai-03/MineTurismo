@@ -1,0 +1,112 @@
+name: Bug report
+description: Report a crash, a rendering problem or something that does not work as expected.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug. Please fill in as much as you can; the Minecraft version and the log help the most.
+        Please write one problem per report.
+  - type: input
+    id: minecraft-version
+    attributes:
+      label: Minecraft version
+      description: The exact version, e.g. 1.20.1 or 26.3.
+      placeholder: "1.20.1"
+    validations:
+      required: true
+  - type: input
+    id: mod-version
+    attributes:
+      label: MineTurismo version
+      description: The file name of the jar you installed.
+      placeholder: "mineturismo-1.0.0+1.20.1.jar"
+    validations:
+      required: true
+  - type: dropdown
+    id: loader
+    attributes:
+      label: Mod loader
+      options:
+        - Fabric
+        - Forge
+        - NeoForge
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: loader-version
+    attributes:
+      label: Loader and Fabric API versions
+      description: For Fabric, the Fabric Loader and Fabric API versions.
+      placeholder: "Fabric Loader 0.17.3, Fabric API 0.92.11+1.20.1"
+    validations:
+      required: true
+  - type: dropdown
+    id: side
+    attributes:
+      label: Where does it happen?
+      options:
+        - Singleplayer
+        - Multiplayer (dedicated server)
+        - Multiplayer (LAN / open to LAN)
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: shaders
+    attributes:
+      label: Shaders
+      description: Iris / Sodium / OptiFine versions and the shader pack name, or "none".
+      placeholder: "Iris 1.7.6, Sodium 0.5.13, Complementary Reimagined r5.8.1"
+    validations:
+      required: true
+  - type: textarea
+    id: other-mods
+    attributes:
+      label: Other mods
+      description: Other mods in your mods folder (including the MineTurismo AI Objects add-on, if installed). "none" if there are none.
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the problem. Screenshots or a short video are very helpful.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: How can the problem be reproduced? Mention the vehicle if it only happens with a specific one.
+      placeholder: |
+        1. Spawn the ... with ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log or crash report
+      description: |
+        Attach `logs/latest.log`, or the file in `crash-reports/` if the game crashed (drag and drop the file here, or paste a link to a paste site).
+        Logs can contain your Minecraft user name and folder paths; remove them if you prefer.
+    validations:
+      required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I downloaded the MineTurismo file that matches my Minecraft version.
+          required: true
+        - label: I searched the existing issues and this problem is not reported yet.
+          required: true

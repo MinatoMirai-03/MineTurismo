@@ -1,0 +1,8 @@
+{
+  "wheelModelId": "kariya_wheel_suv",
+  "frontZ": 1.55,
+  "rearZ": -1.45,
+  "trackHalfWidth": 0.89,
+  "axleHeight": 0.35,
+  "wheelRadius": 0.35
+}

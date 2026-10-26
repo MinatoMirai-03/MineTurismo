@@ -1,0 +1,18 @@
+{
+  "frontX": 0,
+  "frontY": 0.277,
+  "frontZ": 1.843,
+  "frontScale": 0.315,
+  "frontYaw": 0,
+  "frontPitch": 0,
+  "frontRoll": 0,
+  "rearX": 0,
+  "rearY": 0.277,
+  "rearZ": -1.841,
+  "rearScale": 0.315,
+  "rearYaw": 0,
+  "rearPitch": 0,
+  "rearRoll": 0,
+  "frontPlateId": "mineturismo_white",
+  "rearPlateId": "mineturismo_white"
+}

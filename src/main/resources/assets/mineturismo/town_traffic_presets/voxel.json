@@ -1,0 +1,6 @@
+{
+  "label": "Voxel",
+  "normalModelIds": ["chevrolet_corvette_c6_voxel", "dodge_challenger_srt_2020_voxel", "honda_civic_hatchback_2000_voxel", "mclaren_f1_voxel", "nissan_400z_voxel", "volkswagen_scirocco_voxel"],
+  "rareModelIds": [],
+  "default": false
+}

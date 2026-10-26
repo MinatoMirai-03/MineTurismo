@@ -1,0 +1,5 @@
+{
+  "frontX": -0.26, "frontY": -0.62, "frontZ": 1.71, "frontScale": 0.4, "frontYaw": -5.0, "frontPitch": 0.0, "frontRoll": 0.0,
+  "rearX": 0.0, "rearY": -0.26, "rearZ": -1.71, "rearScale": 0.4, "rearYaw": 0.0, "rearPitch": -5.0, "rearRoll": 0.0,
+  "frontPlateId": "naniwa", "rearPlateId": "naniwa"
+}

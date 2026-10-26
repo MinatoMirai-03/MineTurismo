@@ -1,0 +1,990 @@
+{
+	"engine_loop": {
+		"subtitle": "subtitle.mineturismo.engine_loop",
+		"sounds": [
+			"mineturismo:engine/engine_loop"
+		]
+	},
+	"engine_loop_2": {
+		"subtitle": "subtitle.mineturismo.engine_loop",
+		"sounds": [
+			"mineturismo:engine/engine_loop_2"
+		]
+	},
+	"engine_loop_3": {
+		"subtitle": "subtitle.mineturismo.engine_loop",
+		"sounds": [
+			"mineturismo:engine/engine_loop_3"
+		]
+	},
+	"engine_loop_4": {
+		"subtitle": "subtitle.mineturismo.engine_loop",
+		"sounds": [
+			"mineturismo:engine/engine_loop_4"
+		]
+	},
+	"engine_loop_5": {
+		"subtitle": "subtitle.mineturismo.engine_loop",
+		"sounds": [
+			"mineturismo:engine/engine_loop_5"
+		]
+	},
+	"engine_loop_6": {
+		"subtitle": "subtitle.mineturismo.engine_loop",
+		"sounds": [
+			"mineturismo:engine/engine_loop_6"
+		]
+	},
+	"engine_loop_7": {
+		"subtitle": "subtitle.mineturismo.engine_loop",
+		"sounds": [
+			"mineturismo:engine/engine_loop_7"
+		]
+	},
+	"engine_loop_8": {
+		"subtitle": "subtitle.mineturismo.engine_loop",
+		"sounds": [
+			"mineturismo:engine/engine_loop_8"
+		]
+	},
+	"engine_loop_9": {
+		"subtitle": "subtitle.mineturismo.engine_loop",
+		"sounds": [
+			"mineturismo:engine/engine_loop_9"
+		]
+	},
+	"engine_ev_motor": {
+		"subtitle": "subtitle.mineturismo.engine_loop",
+		"sounds": [
+			"mineturismo:engine/engine_ev_motor"
+		]
+	},
+	"engine_quiet": {
+		"subtitle": "subtitle.mineturismo.engine_loop",
+		"sounds": [
+			"mineturismo:engine/engine_quiet"
+		]
+	},
+	"engine_quiet_2": {
+		"subtitle": "subtitle.mineturismo.engine_loop",
+		"sounds": [
+			"mineturismo:engine/engine_quiet_2"
+		]
+	},
+	"engine_ev_motor_4": {
+		"subtitle": "subtitle.mineturismo.engine_loop",
+		"sounds": [
+			"mineturismo:engine/engine_ev_motor_4"
+		]
+	},
+	"engine_ev_motor_5": {
+		"subtitle": "subtitle.mineturismo.engine_loop",
+		"sounds": [
+			"mineturismo:engine/engine_ev_motor_5"
+		]
+	},
+	"engine_ev_motor_6": {
+		"subtitle": "subtitle.mineturismo.engine_loop",
+		"sounds": [
+			"mineturismo:engine/engine_ev_motor_6"
+		]
+	},
+	"engine_ev_motor_7": {
+		"subtitle": "subtitle.mineturismo.engine_loop",
+		"sounds": [
+			"mineturismo:engine/engine_ev_motor_7"
+		]
+	},
+	"engine_railway_1": {
+		"subtitle": "subtitle.mineturismo.engine_loop",
+		"sounds": [
+			"mineturismo:engine/engine_railway_1"
+		]
+	},
+	"engine_railway_2": {
+		"subtitle": "subtitle.mineturismo.engine_loop",
+		"sounds": [
+			"mineturismo:engine/engine_railway_2"
+		]
+	},
+	"engine_helicopter_1": {
+		"subtitle": "subtitle.mineturismo.engine_loop",
+		"sounds": [
+			"mineturismo:engine/engine_helicopter_1"
+		]
+	},
+	"engine_bike_1": {
+		"subtitle": "subtitle.mineturismo.engine_loop",
+		"sounds": [
+			"mineturismo:engine/engine_bike_1"
+		]
+	},
+	"engine_bike_2": {
+		"subtitle": "subtitle.mineturismo.engine_loop",
+		"sounds": [
+			"mineturismo:engine/engine_bike_2"
+		]
+	},
+	"engine_truck_1": {
+		"subtitle": "subtitle.mineturismo.engine_loop",
+		"sounds": [
+			"mineturismo:engine/engine_truck_1"
+		]
+	},
+	"engine_truck_2": {
+		"subtitle": "subtitle.mineturismo.engine_loop",
+		"sounds": [
+			"mineturismo:engine/engine_truck_2"
+		]
+	},
+	"engine_truck_3": {
+		"subtitle": "subtitle.mineturismo.engine_loop",
+		"sounds": [
+			"mineturismo:engine/engine_truck_3"
+		]
+	},
+	"engine_truck_4": {
+		"subtitle": "subtitle.mineturismo.engine_loop",
+		"sounds": [
+			"mineturismo:engine/engine_truck_4"
+		]
+	},
+	"door_lock_1": {
+		"subtitle": "subtitle.mineturismo.door_lock",
+		"sounds": [
+			"mineturismo:lock/door_lock_1"
+		]
+	},
+	"door_lock_2": {
+		"subtitle": "subtitle.mineturismo.door_lock",
+		"sounds": [
+			"mineturismo:lock/door_lock_2"
+		]
+	},
+	"door": {
+		"subtitle": "subtitle.mineturismo.door",
+		"sounds": [
+			"mineturismo:door/door"
+		]
+	},
+	"police_siren": {
+		"subtitle": "subtitle.mineturismo.police_siren",
+		"sounds": [
+			"mineturismo:police_siren/police_siren"
+		]
+	},
+	"horn": {
+		"subtitle": "subtitle.mineturismo.horn",
+		"sounds": [
+			"mineturismo:horn/horn"
+		]
+	},
+	"horn_dual": {
+		"subtitle": "subtitle.mineturismo.horn",
+		"sounds": [
+			"mineturismo:horn/horn_dual"
+		]
+	},
+	"horn_high": {
+		"subtitle": "subtitle.mineturismo.horn",
+		"sounds": [
+			"mineturismo:horn/horn_high"
+		]
+	},
+	"horn_air": {
+		"subtitle": "subtitle.mineturismo.horn",
+		"sounds": [
+			"mineturismo:horn/horn_air"
+		]
+	},
+	"bomb_beep": {
+		"subtitle": "subtitle.mineturismo.bomb_beep",
+		"sounds": [
+			"mineturismo:bomb/bomb_beep"
+		]
+	},
+	"alarm_chirp": {
+		"subtitle": "subtitle.mineturismo.horn",
+		"sounds": [
+			"mineturismo:alarm/alarm_chirp"
+		]
+	},
+	"alarm_sweep": {
+		"subtitle": "subtitle.mineturismo.horn",
+		"sounds": [
+			"mineturismo:alarm/alarm_sweep"
+		]
+	},
+	"siren_jp_police": {
+		"subtitle": "subtitle.mineturismo.police_siren",
+		"sounds": [
+			"mineturismo:police_siren/siren_jp_police"
+		]
+	},
+	"siren_jp_ambulance": {
+		"subtitle": "subtitle.mineturismo.police_siren",
+		"sounds": [
+			"mineturismo:police_siren/siren_jp_ambulance"
+		]
+	},
+	"siren_eu_two_tone": {
+		"subtitle": "subtitle.mineturismo.police_siren",
+		"sounds": [
+			"mineturismo:police_siren/siren_eu_two_tone"
+		]
+	},
+	"passenger_transport_denied": {
+		"subtitle": "subtitle.mineturismo.passenger_transport_denied",
+		"sounds": [
+			"mineturismo:passenger_transport_denied/passenger_transport_denied"
+		]
+	},
+	"car_collision": {
+		"subtitle": "subtitle.mineturismo.car_collision",
+		"sounds": [
+			"mineturismo:collision/car_collision"
+		]
+	},
+	"car_collision_low": {
+		"subtitle": "subtitle.mineturismo.car_collision",
+		"sounds": [
+			"mineturismo:collision/car_collision_low"
+		]
+	},
+	"tire_slip": {
+		"subtitle": "subtitle.mineturismo.tire_slip",
+		"sounds": [
+			"mineturismo:tire_slip/tire_slip"
+		]
+	},
+	"box_break": {
+		"subtitle": "subtitle.mineturismo.box_break",
+		"sounds": [
+			"mineturismo:collision/box_break"
+		]
+	},
+	"barricade_break": {
+		"subtitle": "subtitle.mineturismo.box_break",
+		"sounds": [
+			"mineturismo:collision/barricade_break"
+		]
+	},
+	"chorus_music.a_familiar_room": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/a_familiar_room",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.aerie": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/swamp/aerie",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.an_ordinary_day": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/an_ordinary_day",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.ancestry": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/ancestry",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.below_and_above": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/below_and_above",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.broken_clocks": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/broken_clocks",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.bromeliad": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/bromeliad",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.clark": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/clark",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.comforting_memories": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/comforting_memories",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.crescent_dunes": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/crescent_dunes",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.danny": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/danny",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.deeper": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/deeper",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.dry_hands": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/dry_hands",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.echo_in_the_wind": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/echo_in_the_wind",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.eld_unknown": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/eld_unknown",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.endless": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/endless",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.featherfall": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/featherfall",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.firebugs": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/swamp/firebugs",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.fireflies": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/fireflies",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.floating_dream": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/floating_dream",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.haggstrom": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/haggstrom",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.infinite_amethyst": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/infinite_amethyst",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.key": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/key",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.komorebi": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/komorebi",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.labyrinthine": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/swamp/labyrinthine",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.left_to_bloom": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/left_to_bloom",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.lilypad": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/lilypad",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.living_mice": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/living_mice",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.mice_on_venus": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/mice_on_venus",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.minecraft": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/minecraft",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.os_piano": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/os_piano",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.one_more_day": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/one_more_day",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.oxygene": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/oxygene",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.pokopoko": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/pokopoko",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.puzzlebox": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/puzzlebox",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.stand_tall": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/stand_tall",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.subwoofer_lullaby": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/subwoofer_lullaby",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.sweden": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/sweden",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.watcher": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/watcher",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.wending": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/wending",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.wet_hands": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/wet_hands",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.yakusoku": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/yakusoku",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.aria_math": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/creative/aria_math",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.biome_fest": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/creative/biome_fest",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.blind_spots": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/creative/blind_spots",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.dreiton": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/creative/dreiton",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.haunt_muskie": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/creative/haunt_muskie",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.taswell": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/creative/taswell",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.beginning_2": {
+		"sounds": [
+			{
+				"name": "minecraft:music/menu/beginning_2",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.floating_trees": {
+		"sounds": [
+			{
+				"name": "minecraft:music/menu/floating_trees",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.moog_city_2": {
+		"sounds": [
+			{
+				"name": "minecraft:music/menu/moog_city_2",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.mutation": {
+		"sounds": [
+			{
+				"name": "minecraft:music/menu/mutation",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.ballad_of_the_cats": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/nether/ballad_of_the_cats",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.chrysopoeia": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/nether/crimson_forest/chrysopoeia",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.concrete_halls": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/nether/concrete_halls",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.dead_voxel": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/nether/dead_voxel",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.rubedo": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/nether/nether_wastes/rubedo",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.so_below": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/nether/soulsand_valley/so_below",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.warmth": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/nether/warmth",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.alpha": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/end/alpha",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.boss": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/end/boss",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.the_end": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/end/the_end",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.axolotl": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/water/axolotl",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.dragon_fish": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/water/dragon_fish",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.shuniji": {
+		"sounds": [
+			{
+				"name": "minecraft:music/game/water/shuniji",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.5": {
+		"sounds": [
+			{
+				"name": "minecraft:records/5",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.11": {
+		"sounds": [
+			{
+				"name": "minecraft:records/11",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.13": {
+		"sounds": [
+			{
+				"name": "minecraft:records/13",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.blocks": {
+		"sounds": [
+			{
+				"name": "minecraft:records/blocks",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.cat": {
+		"sounds": [
+			{
+				"name": "minecraft:records/cat",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.chirp": {
+		"sounds": [
+			{
+				"name": "minecraft:records/chirp",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.creator": {
+		"sounds": [
+			{
+				"name": "minecraft:records/creator",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.creator_music_box": {
+		"sounds": [
+			{
+				"name": "minecraft:records/creator_music_box",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.far": {
+		"sounds": [
+			{
+				"name": "minecraft:records/far",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.lava_chicken": {
+		"sounds": [
+			{
+				"name": "minecraft:records/lava_chicken",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.mall": {
+		"sounds": [
+			{
+				"name": "minecraft:records/mall",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.mellohi": {
+		"sounds": [
+			{
+				"name": "minecraft:records/mellohi",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.otherside": {
+		"sounds": [
+			{
+				"name": "minecraft:records/otherside",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.pigstep": {
+		"sounds": [
+			{
+				"name": "minecraft:records/pigstep",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.precipice": {
+		"sounds": [
+			{
+				"name": "minecraft:records/precipice",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.relic": {
+		"sounds": [
+			{
+				"name": "minecraft:records/relic",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.stal": {
+		"sounds": [
+			{
+				"name": "minecraft:records/stal",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.strad": {
+		"sounds": [
+			{
+				"name": "minecraft:records/strad",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.tears": {
+		"sounds": [
+			{
+				"name": "minecraft:records/tears",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.wait": {
+		"sounds": [
+			{
+				"name": "minecraft:records/wait",
+				"stream": true
+			}
+		]
+	},
+	"chorus_music.ward": {
+		"sounds": [
+			{
+				"name": "minecraft:records/ward",
+				"stream": true
+			}
+		]
+	},
+	"slot.start": {
+		"sounds": [
+			"mineturismo:slot/start"
+		]
+	},
+	"slot.tick": {
+		"sounds": [
+			"mineturismo:slot/tick"
+		]
+	},
+	"slot.stop": {
+		"sounds": [
+			"mineturismo:slot/stop"
+		]
+	},
+	"slot.lose": {
+		"sounds": [
+			"mineturismo:slot/lose"
+		]
+	},
+	"slot.win": {
+		"sounds": [
+			"mineturismo:slot/win"
+		]
+	},
+	"slot.jackpot": {
+		"sounds": [
+			"mineturismo:slot/jackpot"
+		]
+	}
+}
